@@ -1,0 +1,24 @@
+<div class="w-2/3 p-5">
+  <h1 class="text-5xl mt-4 mb-6">Lista de plantas</h1>
+  <ul>
+    <li
+      *ngFor="let plant of plants.sort()"
+      class="flex flex-row gap-x-4 outline outline-1 outline-slate-900 mb-3 rounded"
+    >
+      <p class="text-3xl">{{ plant.name }}</p>
+      <p class="text-3xl">{{ plant.type }}</p>
+      <div class="flex flex-row gap-x-2">
+        <button (click)="favoritePlant(plant)">
+          <i
+            *ngIf="plant.favorite"
+            class="fa-solid fa-star text-2xl text-yellow-400"
+          ></i
+          ><i *ngIf="!plant.favorite" class="fa-solid fa-star text-2xl"></i>
+        </button>
+        <button (click)="deletePlant(plant.name)">
+          <i class="fa-solid fa-trash text-2xl text-red-700"></i>
+        </button>
+      </div>
+    </li>
+  </ul>
+</div>
