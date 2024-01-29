@@ -1,22 +1,26 @@
-<div class="w-2/3 p-5">
-  <h1 class="text-5xl mt-4 mb-6">Lista de plantas</h1>
-  <ul>
+<div class="flex flex-col items-center mx-auto">
+  <ul class="bg-cyan-400 p-6 rounded-t-none rounded-lg w-full">
     <li
       *ngFor="let plant of plants.sort()"
-      class="flex flex-row gap-x-4 outline outline-1 outline-slate-900 mb-3 rounded"
+      class="flex flex-row gap-x-5 mb-2 justify-between bg-cyan-200 rounded p-4 text-slate-950"
     >
-      <p class="text-3xl">{{ plant.name }}</p>
-      <p class="text-3xl">{{ plant.type }}</p>
-      <div class="flex flex-row gap-x-2">
+      <p class="text-xl">{{ plant.name }}</p>
+      <p class="text-xl">{{ plant.type }}</p>
+      <div class="flex gap-x-2 flex-row">
         <button (click)="favoritePlant(plant)">
           <i
             *ngIf="plant.favorite"
-            class="fa-solid fa-star text-2xl text-yellow-400"
+            class="fa-solid fa-star text-xl text-yellow-400"
           ></i
-          ><i *ngIf="!plant.favorite" class="fa-solid fa-star text-2xl"></i>
+          ><i
+            *ngIf="!plant.favorite"
+            class="fa-solid fa-star text-xl text-slate-950"
+          ></i>
         </button>
         <button (click)="deletePlant(plant.name)">
-          <i class="fa-solid fa-trash text-2xl text-red-700"></i>
+          <i
+            class="fa-solid fa-trash text-xl text-red-700 duration-300 hover:scale-105"
+          ></i>
         </button>
       </div>
     </li>

@@ -1,29 +1,29 @@
-<div class="flex justify-between gap-x-4 mt-10 mb-10">
+<div class="flex flex-row gap-x-4 w-fit">
   <img
     *ngIf="type === '' || type === 'arbol'"
-    class="outline outline-1 rounded"
-    src="../../assets/images/bush.jpg"
+    class="rounded w-10 duration-200 hover:scale-105"
+    src="../../assets/images/bush.png"
     alt="Arbusto"
     (click)="selectType('arbusto')"
   />
   <img
     *ngIf="type === 'arbusto'"
-    class="outline outline-3 rounded outline-green-600"
-    src="../../assets/images/bush.jpg"
+    class="outline outline-3 rounded outline-green-600 w-10 duration-200 hover:scale-105"
+    src="../../assets/images/bush.png"
     alt="Arbusto"
     (click)="selectType('')"
   />
   <img
     *ngIf="type === '' || type === 'arbusto'"
-    class="outline outline-1 rounded"
-    src="../../assets/images/tree.jpg"
+    class="rounded w-10 duration-200 hover:scale-105"
+    src="../../assets/images/tree.png"
     alt="Arbol"
     (click)="selectType('arbol')"
   />
   <img
     *ngIf="type === 'arbol'"
-    class="outline outline-3 rounded outline-green-600"
-    src="../../assets/images/tree.jpg"
+    class="outline outline-3 rounded outline-green-600 w-10 duration-200 hover:scale-105"
+    src="../../assets/images/tree.png"
     alt="Arbol"
     (click)="selectType('')"
   />

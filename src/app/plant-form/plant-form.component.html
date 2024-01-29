@@ -1,6 +1,6 @@
-<div class="w-1/3 p-5">
+<div class="flex flex-row items-center w-fit p-6 mx-auto gap-x-4">
   <input
-    class="text-5xl outline-none p-2 duration-100 focus:border-b-2 focus:border-slate-900"
+    class="placeholder:text-slate-800 text-xl pt-4 pl-2 bg-cyan-200 pr-2 pb-4 rounded outline-none duration-100 focus:shadow focus:shadow-cyan-200"
     type="text"
     placeholder="Nombre de la planta"
     [(ngModel)]="plant.name"
@@ -11,14 +11,14 @@
     [type]="plant.type"
   ></app-image-selector>
 
-  <div class="flex justify-between gap-x-40 mt-10 mb-10">
+  <div class="flex flex-row gap-x-4">
     <i
-      class="fa-solid fa-check text-5xl p-4 text-green-500 outline outline-1 ml-8"
-      (click)="savePlant()"
+      class="fa-solid fa-xmark text-xl p-1 bg-red-600 text-slate-50 w-fit h-fit rounded duration-200 hover:scale-105"
+      (click)="clearForm()"
     ></i>
     <i
-      class="fa-solid fa-xmark text-5xl p-4 text-red-600 outline outline-1"
-      (click)="clearForm()"
+      class="fa-solid fa-check text-xl p-1 bg-green-500 text-slate-50 w-fit h-fit rounded duration-200 hover:scale-105"
+      (click)="savePlant()"
     ></i>
   </div>
 </div>
