@@ -14,7 +14,7 @@ import { ImageSelectorComponent } from '../image-selector/image-selector.compone
 })
 export class PlantFormComponent {
 
-  plant: Plant = { name: '', type: '' ,favorite:false};
+  public plant: Plant = { name: '', type: '' ,favorite:false};
 
   public selectType(type: string): void {
 

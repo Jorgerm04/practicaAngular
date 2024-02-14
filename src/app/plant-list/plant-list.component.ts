@@ -18,16 +18,12 @@ export class PlantListComponent {
 constructor(private plantService:PlantsService){
 }
 
-deletePlant(plantName:String):void{
+public deletePlant(plantName:String):void{
   this.plantService.deletePlant(plantName);
 }
 
-favoritePlant(plant:Plant):void{
-  if(plant.favorite){
-    plant.favorite=false;
-  }else{
-    plant.favorite=true;
-  }
+public favoritePlant(plant:Plant):void{
+    plant.favorite= !plant.favorite;
 }
 
 }
